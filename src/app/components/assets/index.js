@@ -21,9 +21,12 @@ import { CiCircleChevLeft as ClockIcon } from 'react-icons/ci';
 import { HiSpeakerWave as SpeakerWaveIcon } from 'react-icons/hi2';
 import { FaCirclePlay as PlayIcon } from 'react-icons/fa6';
 import { MdReplay10 as ReplayIcon } from 'react-icons/md';
+import { FiSearch as SearchIcon } from "react-icons/fi";
+import { MdExpandMore as ExpandMoreIcon} from "react-icons/md";
+import { MdDateRange as DateRangeIcon } from "react-icons/md";
 export const Icons = {
   Expand,
-  HamburgerMenuIcon,
+
   CloseIcon,
   PhoneIcon,
   EmailIcon,
@@ -33,7 +36,11 @@ export const Icons = {
   WorldIcon,
   OfficeIcon,
   MobilePhoneIcon,
-
+  
+  HamburgerMenuIcon,
+  DateRangeIcon ,
+  ExpandMoreIcon,
+  SearchIcon ,
   DownloadIcon,
   ClockIcon,
   SpeakerWaveIcon,

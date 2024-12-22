@@ -77,19 +77,9 @@ button {
 }
 
 .blog .img-box {
-  /* width: 100%; */
   height: 80%;
-  /* overflow: hidden; */
+}
 
-}
-/* .imgBox img {
-  width: 100%;
-  height: 100%;
-  transition: var(--transition);
-}
-.blog img:hover {
-  transform: scale(1.2);
-} */
 .blog p {
   font-weight: 600;
   padding: 20px 20px 20px 20px;

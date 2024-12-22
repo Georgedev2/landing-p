@@ -1,18 +1,18 @@
 'use client';
-import Image from 'next/image';
 import { Icons, Images } from '../../assets';
 import CardTitle from '../CardTitle';
 import styles from './podcast.module.css';
 import { createArrayOfDuplicate, getRandomNumber } from '../../utils';
 import CardImage from '../cardImage/Index';
 import { useState } from 'react';
+import Image from 'next/image';
 const { blogImage } = Images;
 
-const { DownloadIcon, ClockIcon, SpeakerWaveIcon } = Icons;
+const { DownloadIcon, ClockIcon, DateRangeIcon, SpeakerWaveIcon } = Icons;
 const tabs_ = [
   { label: 'ALL', isSelected: true, id: getRandomNumber() },
   { label: 'LOAN', id: getRandomNumber() },
-  { label: 'INSURANCE', id:getRandomNumber() },
+  { label: 'INSURANCE', id: getRandomNumber() },
   { label: 'WAYS TO BANK', id: getRandomNumber() },
   { label: 'FAMILY', id: getRandomNumber() },
 ];
@@ -27,10 +27,9 @@ that SMEs account forms approximately 50% and
 sector respectively.`,
 };
 
-
 const Podcast = () => {
   const [tabs, setTabs] = useState(tabs_);
-  
+
   const handleTabChange = (id) => {
     setTabs((oldState) =>
       oldState.map((tab) => {
@@ -39,7 +38,7 @@ const Podcast = () => {
           return tab;
         }
         tab.isSelected = false;
-        return tab
+        return tab;
       })
     );
   };
@@ -62,14 +61,32 @@ const Podcast = () => {
       <div className={styles.podcasts}>
         {createArrayOfDuplicate(padCast, 6).map((podcast) => (
           <div key={podcast.id} className={styles.podcast}>
-            <CardImage
-              src={podcast.image}
-              alt="title"
-              className={styles.podcastImage_c}
-              cardImageClassName={styles.podcastImage}
-            />
+            <div className={`${styles.imgBox}`}>
+              <Image
+                src={podcast.image}
+                alt={''}
+                className={`${styles.image} `}
+              />
+            </div>
             <div className={styles.body}>
-              <p>{padCast.description}</p>
+              <div>
+                <div className={styles.date}>
+                  <div>
+                    <DateRangeIcon size={'1.2rem'} />
+                    <span> SEPTEMBER 15, 2022</span>
+                  </div>
+                  <div>
+                    <ClockIcon size={'1.2rem'} />
+                    <span> 02 20 06</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>{padCast.title}</h3>
+                <p> {padCast.description}</p>
+                <div>
+                    </div>
+              </div>
             </div>
           </div>
         ))}
