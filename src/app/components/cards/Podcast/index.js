@@ -3,7 +3,6 @@ import { Icons, Images } from '../../assets';
 import CardTitle from '../CardTitle';
 import styles from './podcast.module.css';
 import { createArrayOfDuplicate, getRandomNumber } from '../../utils';
-import CardImage from '../cardImage/Index';
 import { useState } from 'react';
 import Image from 'next/image';
 const { blogImage } = Images;

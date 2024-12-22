@@ -24,7 +24,7 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 .podcasts > * {
-  height: 300px;
+ min-height: 300px;
   cursor: pointer;
 }
 .podcast {
