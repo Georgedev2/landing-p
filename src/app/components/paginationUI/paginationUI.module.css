@@ -1,0 +1,20 @@
+.box {
+  max-width: 400px;
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #333536b3;
+}
+.pages button {
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px 9px;
+}
+.previous {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.previous:hover{
+    color: var(--primary-color); 
+}

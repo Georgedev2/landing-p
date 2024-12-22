@@ -1,0 +1,6 @@
+.blogTitle span {
+    color: var(--primary-color);
+  }
+  .blogTitle span:last-child {
+    font-size: 25px;
+  }

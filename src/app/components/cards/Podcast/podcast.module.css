@@ -1,0 +1,57 @@
+.tabs {
+  display: flex;
+  gap: 5px;
+  margin: 30px auto 20px auto;
+  /* Scroll */
+  width: max-content; /* this width should be 100% on mobile screen for the scrollbar to work  */
+  padding: 10px 0px; /* prevent the scroll bar not occupied the part of the element, whenever its show up */
+  white-space: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.isSelected {
+  color: white !important;
+  background-color: #003b65 !important;
+}
+
+.podcasts {
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px 0px;
+  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.podcasts > * {
+  height: 300px;
+  cursor: pointer;
+}
+.podcast {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.podcastImage_c {
+  height: 100%;
+  width: 60%;
+}
+.podcastImage{
+    object-fit: cover;
+}
+
+.podcast .body {
+  padding: 20px;
+  width: 70%;
+
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    width: 100%;
+  }
+  .podcast img {
+    width: 50%;
+  }
+}
