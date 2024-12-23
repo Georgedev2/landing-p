@@ -45,4 +45,7 @@
     font-weight: 600;
     padding: 20px;
   }
+  .slideDetail h4 {
+    font-size: 20px;
+  }
 }
