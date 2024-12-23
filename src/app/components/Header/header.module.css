@@ -1,17 +1,25 @@
-.firstNav {
-  /* background-color: var(--primary-color) */
+.firstNav{
+    background-color: var(--primary-color);
+
 }
 .firstNav > div:only-child {
   width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
   font-size: 13px;
   margin: auto;
+  color: #eee ;
 }
 .firstNav link {
   color: #eee;
+  height: 40px;
+ 
+}
+.isCurrentL{
+    background: white;
+    padding: 0px 5px;
+    color: var(--primary-color)
 }
 .bottomNavLinks {
   background-color: white;
@@ -27,8 +35,8 @@
   height: 25px;
   color: var(--primary-color);
 }
-.loginBox{
-    display: none;
+.loginBox {
+  display: none;
 }
 .menuBox {
   width: 50px;
@@ -73,13 +81,17 @@
   cursor: pointer;
 }
 .links_c .link {
-  color: var(--primary-color);
   cursor: pointer;
   display: flex;
   align-items: center;
+  min-height: 40px;
 }
 
 @media (max-width: 768px) {
+  .firstNav > div:only-child {
+    justify-content: center;
+    font-size: 14px;
+  }
   .bottomNavLinks > div:only-child {
     height: 56px;
   }
@@ -88,11 +100,14 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .firstNav_child {
+    display: none;
+  }
+
   .secondChild {
     display: none;
   }
-  .loginBox{
+  .loginBox {
     display: block;
-}
+  }
 }

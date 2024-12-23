@@ -83,8 +83,7 @@ const Podcast = () => {
               <div>
                 <h3>{padCast.title}</h3>
                 <p> {padCast.description}</p>
-                <div>
-                    </div>
+                <div></div>
               </div>
             </div>
           </div>

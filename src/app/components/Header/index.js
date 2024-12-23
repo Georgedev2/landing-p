@@ -30,28 +30,50 @@ const links_ = [
 const links2 = [
   {
     id: getRandomNumber(),
-    label: 'CATEGORIES',
+    label: 'HOME',
     path: '',
   },
   {
     id: getRandomNumber(),
-    label: 'BLOG',
+    label: 'PERSONAL',
+    path: '',
+    isCurrentLocation: true,
+  },
+  {
+    id: getRandomNumber(),
+    label: 'BUSINESS',
     path: '',
   },
   {
     id: getRandomNumber(),
-    label: 'SUBSCRIBE',
+    label: 'PRIVATE',
+    path: '',
+  },
+];
+const links3 = [
+  {
+    id: getRandomNumber(),
+    label: 'SELECT LANGUAGE',
+    path: '',
+    isCurrentLocation: true,
+  },
+  {
+    id: getRandomNumber(),
+    label: 'SUSTAINABILITY',
     path: '',
   },
 ];
 const NavLinks = (props) => {
   const { links = [] } = props;
-  console.log('links',links)
   if (!links.length) return <></>;
+
   return (
     <ul className={links_c}>
-      {links.map(({ id, label, path, isDropdown }) => (
-        <li key={id} className={link}>
+      {links.map(({ id, label, isDropdown, isCurrentLocation }) => (
+        <li
+          key={id}
+          className={`${link} ${isCurrentLocation ? styles.isCurrentL : ''}`}
+        >
           <span> {label}</span>{' '}
           <span>{isDropdown ? <ExpandMoreIcon size={'1.2rem'} /> : null}</span>
         </li>
@@ -64,8 +86,10 @@ const Header = () => {
     <header>
       <section id="top" className={styles.firstNav}>
         <div>
-        <NavLinks links={links2}/>
-          <NavLinks links={links2 }/>
+          <NavLinks links={links2} />
+          <div className={styles.firstNav_child}>
+            <NavLinks links={links3} />
+          </div>
         </div>
       </section>
       <section className={bottomNavLinks}>
@@ -79,7 +103,7 @@ const Header = () => {
           </div>
 
           <div className={secondChild}>
-            <NavLinks links={links_ }/>
+            <NavLinks links={links_} />
             <SearchIcon size={'1.5rem'} className={styles.search} />
             <Link href={'#contact'} className={`${contact} primary-button`}>
               Contact
